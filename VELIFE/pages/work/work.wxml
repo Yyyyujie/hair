@@ -1,0 +1,14 @@
+<view class='main'>
+  <text class='pullRight' bindtap='addWork'>添加经验</text>
+  <view class="year">{{barber.workingLife}}工作经验</view>
+  <view class='progress'>
+      <view class='work' wx:for="{{list}}" bindlongtap='delWork' data-id="{{item.id}}"> 
+          <view class='title'><text class='zw'>{{item.unit}}</text><text>{{item.post}}</text></view>
+          <view>在职时间:<text>{{item.startTime}}至{{item.endTime}}</text></view>
+          <view class='card'>
+            <image src='../../images/workIcon.png'></image>
+          </view>
+      </view>
+      <view wx:if="{{list.length==0}}" class='nothing'>暂无工作经验</view>
+  </view>
+</view>

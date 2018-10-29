@@ -1,0 +1,43 @@
+<!--pages/me.wxml-->
+<view class='header'>
+  <view class='tx' >
+    <image src='{{user.headImage?user.headImage:"../../images/logo.png"}}' bindtap='person'></image>
+   
+  </view>
+  <view class='wel'>HI,<text>{{user.name}}</text></view>
+  <view class='address'>{{user.address}}</view>
+  <view class='call' bindtap='Sign'>
+    <image src='../../images/sign.png'></image>
+    <view>签到打卡</view>
+  </view>
+</view>
+<view class='tabBox'>
+    <view class='checkOrder' bindtap='check'>
+      <image src='../../images/checkOrder.png'></image>
+      <text>订单查询</text>
+    </view>
+    <view class='work' bindtap='work'>
+       <image src='../../images/work.png'></image>
+      <text>工作经验</text>
+    </view>
+     <view class='checkOrder' bindtap='report'>
+      <image src='../../images/report.png'></image>
+      <text>业绩统计</text>
+    </view>
+    <view class='work' bindtap='bill'>
+       <image src='../../images/bill.png'></image>
+      <text>结账统计</text>
+    </view> 
+    <view class='project' bindtap='history'>
+       <image src='../../images/project.png'></image>
+      <text>我的作品</text>
+    </view>
+    <view class='eva' bindtap='eva'>
+       <image src='../../images/eva.png'></image>
+      <text>对我的评价</text>
+    </view>
+    <view class='eva' bindtap='account'>
+       <image src='../../images/checkOut.png'></image>
+      <text>结账</text>
+    </view>
+</view>

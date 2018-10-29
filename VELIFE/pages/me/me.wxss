@@ -1,0 +1,107 @@
+/* pages/me.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.header{
+  width: 100%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.tx{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  position: relative;
+}
+.tx image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.wel{
+  font-size: 40rpx;
+  color: #000;
+  margin: 10rpx 0;
+}
+.address{
+  color: #424242;
+  font-size: 24rpx;
+}
+.tabBox{
+  width: 100%;
+  height: 60%;
+  padding:40rpx;
+box-sizing:border-box;
+
+}
+.tabBox>view{
+  width: 33.33%;
+  height: 33.33%;
+  float: left;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size:30rpx;
+   border-right: 1rpx solid #f5f5f5;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+.tabBox>view:nth-child(3n){
+  border-right: 1rpx solid #fff;
+}
+/* .checkOrder{
+  border-right: 1rpx solid #f5f5f5;
+  border-bottom: 1rpx solid #f5f5f5;
+} */
+.checkOrder image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 20rpx;
+}
+.work image,.project image,.eva image{
+width: 60rpx;
+height: 60rpx;
+ margin-bottom: 20rpx;
+
+}
+.call{
+  width: 120rpx;
+  height: 100rpx;
+  position: absolute;
+  right:50rpx;
+  top:50rpx;
+  text-align: center;
+  font-size: 26rpx;
+  line-height: 20rpx;
+}
+.call image{
+  display: inline-block;
+  width: 60rpx;
+  height: 60rpx;
+}
+.stuatusBox{
+  width: 28rpx;
+  height: 28rpx;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+  right: 5rpx;
+  bottom: 5rpx;
+}
+.online{
+  background: green
+}
+.leave{
+  background: #ccc;
+}
+.rest{
+  background: pink;
+}
+.offline{
+  background: #000;
+}

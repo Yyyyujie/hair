@@ -1,0 +1,38 @@
+<view class="logoBox">
+  <view class='logo'>
+    <image src='../../images/logo.png'></image>
+  </view>
+  <text class='title'>微剪生活</text>
+  <text class='titleEng'>VELIFE</text>
+</view>
+<form bindsubmit='login'>
+  <view class='formBox'>
+    <view class='nameBox'>
+      <view class='iconBox'>
+        <image src='../../images/username.png'></image>
+      </view>
+     
+        <input placeholder='手机号/邮箱号/用户名' placeholder-class="plac" type='number' value='{{phone}}' maxlength="11" name="phone"></input>
+
+     
+    </view>
+    <view class='passBox'>
+      <view class='iconBox'>
+        <image src='../../images/password.png'></image>
+      </view>
+      <view class='inpBox'>
+        <input placeholder='请输入登录密码' placeholder-class="plac" type='text' password="true" value='{{pass}}' name="password"></input>
+      </view>
+      <view class='iconBox'></view>
+    </view>
+    <!-- <view class='radioBox'>
+      <view>
+        <checkbox color="#BD9DDF" style="transform:scale(.7)" checked='{{checked}}' bindtap='chengeCheck'></checkbox>
+        <text>记住密码</text>
+      </view>
+    </view> -->
+    <button class='sub' form-type='submit'>LOGIN</button>
+
+
+  </view>
+</form>

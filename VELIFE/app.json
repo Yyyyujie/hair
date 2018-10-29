@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/history/history",
+    "pages/login/login",
+    "pages/order/order",
+    "pages/me/me",
+    "pages/person/person",
+    "pages/checkOrder/checkOrder",
+    "pages/work/work",
+    "pages/addWork/addWork",
+    "pages/addMyWork/addMyWork",
+    "pages/eva/eva",
+    "pages/editPass/editPass",
+    "pages/sign/sign",
+    "pages/editMyWork/editMyWork",
+    "pages/bill/bill",
+    "pages/report/report",
+    "pages/Account/Account",
+    "pages/uploadHair/uploadHair"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#000",
+    "backgroundColor": "#fff",
+    "borderStyle": "#f6f6f6",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "服务",
+        "iconPath": "./images/tabbar/index.png",
+        "selectedIconPath": "./images/tabbar/indexOn.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "./images/tabbar/order.png",
+        "selectedIconPath": "./images/tabbar/orderOn.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "./images/tabbar/me.png",
+        "selectedIconPath": "./images/tabbar/meOn.png"
+      }
+    ]
+  }
+}

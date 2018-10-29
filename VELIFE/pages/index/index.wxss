@@ -1,0 +1,183 @@
+/**index.wxss**/
+page{
+  width: 100%;
+  height: 100%;
+}
+.banner{
+  width: 100%;
+  height: 32%;
+  position: relative;
+}
+.banner image{
+  width: 100%;
+  height: 100%;
+}
+.main{
+  width: 90%;
+  margin: 0 auto;
+}
+.title{
+  display: flex;
+  align-items: center;
+   margin-top: 20rpx;
+}
+.iconBox{
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+  margin-right: 10rpx;
+}
+.iconBox image{
+  width: 100%;
+  height: 100%;
+  display:inherit;
+}
+.title>text:nth-child(2){
+  font-weight: bold;
+  font-size: 22rpx;
+  margin-right: 10rpx;
+}
+.title>text:nth-child(3){
+  font-size: 22rpx;
+  margin-right: 10rpx;
+  color: #6D6F73;
+}
+.title>text:nth-child(4){
+  font-size: 28rpx;
+}
+.bannerZi{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.75);
+}
+.bannerZi image{
+  width: 50%;
+  height: 70%;
+}
+.card{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20rpx;
+  margin-top: 30rpx;
+  background: #fff;
+  box-shadow:0 0 13rpx 0 #eceaea;
+  font-size: 26rpx;
+  letter-spacing: 2rpx;
+  line-height: 50rpx;
+  overflow: hidden;
+  color: #787878;
+  position: relative;
+}
+.call{
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+  color: #000;
+  padding-right: 40rpx;
+}
+.orderNumber{
+  font-size: 40rpx;
+  color: #656565;
+}
+.btnGroup{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50rpx;
+  height:200rpx;
+}
+image{
+  width: 100%;
+  height: 100%;  
+}
+.bot{
+  width: 100%;
+  height: 40rpx;
+  position: absolute;
+  left: 0rpx;
+  bottom: -4rpx;
+}
+.bot image{
+  width: 100%;
+  height: 100%;
+}
+.no-letter{
+  letter-spacing: 0;
+}
+.card text{
+  margin-left: 10rpx;
+}
+.serverBox{
+  position: absolute;
+  right: 20rpx;
+  top:20rpx;
+}
+.serverBox view{
+  padding: 5rpx 30rpx;
+  background: #8B8B8B;
+  border-radius: 25rpx;
+  color: #fff;
+  font-size: 24rpx;
+  box-shadow: 0 0 16rpx 0px #929292;
+  text-align:center;
+}
+.server{
+  margin-bottom: 40rpx;
+}
+.shout,.next{
+  width: 230rpx;
+  height: 80rpx;
+  background: #8B8B8B;
+  line-height: 80rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+  position: relative;
+  border-radius: 20rpx;
+  box-shadow: 0 0 16rpx 0px #929292;
+}
+.shout image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.shout text{
+  position: relative;
+  z-index: 99;
+}
+.btnGroup .active{
+ background: radial-gradient( circle at 115rpx 80rpx, #69BAFA, #299CF6);
+ box-shadow: 0 0 20rpx 0 rgba(67, 149, 255, 0.8);
+}
+.callBox{
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.callBox image{
+  float: left;
+}
+.serverBox .active{
+  background: radial-gradient( circle at 50rpx 30rpx, #69BAFA, #299CF6);
+ box-shadow: 0 0 20rpx 0 rgba(67, 149, 255, 0.8);
+}
+.nothing{
+  text-align:center;
+  font-size:28rpx;
+  color:#333;
+  line-height:100rpx;
+}

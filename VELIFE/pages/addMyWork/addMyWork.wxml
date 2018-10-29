@@ -1,0 +1,76 @@
+<view class="main">
+  <view class='title'>
+    <view class='iconBox'>
+      <image src='../../images/logo.png'></image>
+    </view>
+    <text>HAIR</text>
+    <text>STYLIST</text>
+    <text>作品上传</text>
+  </view>
+   <view style='overflow:hidden;'>
+    <view class='upload' wx:for="{{imgArr}}">
+    <image src='{{item}}'></image>
+  </view>
+  <view class='upload'>
+    <image src='{{img}}'></image>
+    <view class='camera' bindtap='choose'>
+      <image src='../../images/camera.png'></image>
+    </view>
+  </view>
+   </view>
+  <view class='title'>
+    <view class='iconBox'>
+      <image src='../../images/logo.png'></image>
+    </view>
+    <text>HAIR</text>
+    <text>STYLIST</text>
+    <text>发质选择</text>
+  </view>
+  <view class='mainBox'>
+    <view>发量
+      <view class='pullRight'>
+        <view class="section">
+          <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="picker">
+            {{array[index]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <view>发质
+      <view class='pullRight'>
+        <view class="section">
+          <picker bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}">
+            <view class="picker">
+            {{array1[index1]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <view>脸型
+      <view class='pullRight'>
+        <view class="section">
+          <picker bindchange="bindPickerChange2" value="{{index2}}" range="{{array2}}">
+            <view class="picker">
+            {{array2[index2]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <view>排序值
+      <view class='pullRight'>
+        <view class="section">
+          <picker bindchange="bindPickerChange3" value="{{index3}}" range="{{array3}}">
+            <view class="picker">
+            {{array3[index3]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+  </view>
+  <button class='up' bindtap='Release'>发布作品</button>
+</view>

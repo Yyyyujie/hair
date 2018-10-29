@@ -1,0 +1,41 @@
+<view class="logoBox">
+  <view class='logo'>
+    <image src='../../images/logo.png'></image>
+  </view>
+  <text class='title'>微剪生活</text>
+  <text class='titleEng'>VELIFE</text>
+</view>
+  <view class='formBox'>
+
+    <view class='nameBox'>
+      <view class='iconBox'>
+        <image src='../../images/username.png'></image>
+      </view>
+      <view class='inpBox'>
+        <input placeholder='请输入旧密码' placeholder-class="plac" type='text' password="true" bindinput='oldPass' name="password"></input>
+      </view>
+      <view class='iconBox hide'></view>
+    </view>
+    <view class='passBox'>
+      <view class='iconBox'>
+        <image src='../../images/password.png'></image>
+      </view>
+      <view class='inpBox'>
+        <input placeholder='请输入新密码' placeholder-class="plac" type='text' password="true" bindinput='newPass' name="password1"></input>
+      </view>
+      <view class='iconBox'></view>
+    </view>
+    <view class='passBox'>
+      <view class='iconBox'>
+        <image src='../../images/password.png'></image>
+      </view>
+      <view class='inpBox'>
+        <input placeholder='请再次输入新密码' placeholder-class="plac" type='text' password="true" bindinput='againPass' name="password2"></input>
+      </view>
+      <view class='iconBox'></view>
+    </view>
+
+    <button class='sub' bindtap='edit'>修改</button>
+
+
+  </view>

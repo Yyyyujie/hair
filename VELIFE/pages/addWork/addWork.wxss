@@ -1,0 +1,27 @@
+.main{
+  padding: 80rpx 40rpx;
+  box-sizing: border-box;
+}
+.main>view{
+  border-bottom: 2rpx solid #DFDFDF;
+  font-size: 28rpx;
+  line-height: 80rpx;
+}
+.pullRight{
+  float: right;
+}
+.main input{
+  height:80rpx;
+line-height:80rpx;
+text-align: right
+
+}
+.inp{
+  line-height:80rpx;
+}
+button{
+  margin-top: 40rpx;
+  background: #E31E4C;
+  color: #fff;
+  font-size: 30rpx;
+}

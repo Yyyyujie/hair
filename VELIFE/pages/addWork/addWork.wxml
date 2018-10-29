@@ -1,0 +1,31 @@
+<view class='main'>
+  <view>工作门店
+    <input placeholder="输入工作门店" class='pullRight' placeholder-class="inp" bindinput="store"/>
+  </view>
+  <view>职位
+    <input placeholder="输入工作职位" class='pullRight' placeholder-class="inp" bindinput="post"/>
+  </view>
+  <view>开始时间
+    <view class='pullRight'>
+      <view class="section">
+        <picker mode="date" value="{{date}}" start="1990-09-01" end="{{end}}" bindchange="bindDateChange">
+          <view class="picker">
+            {{date}}
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <view>结束时间
+    <view class='pullRight'>
+      <view class="section">
+        <picker mode="date" value="{{date1}}" start="1990-09-01" end="{{end}}" bindchange="bindDateChange1">
+          <view class="picker">
+            {{date1}}
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <button bindtap='add'>确定</button>
+</view>

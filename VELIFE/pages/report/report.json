@@ -1,0 +1,9 @@
+{
+  "backgroundTextStyle": "#19181E",
+  "navigationBarBackgroundColor": "#19181E",
+  "navigationBarTextStyle": "#fff",
+  "navigationBarTitleText": "业务统计",
+  "usingComponents": {
+    "ec-canvas": "../../ec-canvas/ec-canvas"
+  }
+}

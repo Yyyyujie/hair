@@ -1,0 +1,105 @@
+page{
+  width: 100%;
+  height: 100%;
+}
+.logoBox{
+  width: 100%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom:5%;
+}
+.logo{
+  width:100rpx;
+  height: 100rpx;
+  background: blud;
+}
+.logo image{
+  width: 100%;
+  height: 100%;
+}
+.title{
+  font-size: 40rpx;
+  font-weight: 500;
+  letter-spacing: 8rpx;
+  font-family: "Microsoft YaHei";
+  margin: 10rpx 0;
+}
+.titleEng{
+  color: #D71B4B;
+  font-size: 24rpx;
+  font-weight: bold
+}
+.formBox{
+  width: 100%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around
+}
+.nameBox,.passBox{
+  width: 80%;
+  height: 80rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nameBox .inpBox,.passBox .inpBox{
+  width: 80%;
+  height: 100%;
+  border-radius: 45rpx;
+  background: linear-gradient(to right,#FC739A,#B164FF);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inpBox input{
+  box-sizing: border-box;
+  width: 98%;
+  height: 90%;
+  background: #fff;
+  border-radius: 40rpx;
+  padding-left: 20rpx;
+   font-size: 26rpx;
+}
+.radioBox{
+  height: 26rpx;
+  width: 64%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+}
+.sub{
+  width: 64%;
+  height: 80rpx;
+  border-radius: 40rpx;
+  background: linear-gradient(to right,#F42158,#6A1EB6);
+  color: #fff;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  letter-spacing: 4rpx;
+}
+.iconBox{
+  width: 80rpx;
+  height: 70rpx;
+}
+.plac{
+  font-size: 26rpx;
+  color: #E9E9E9;
+}
+.hide{
+  visibility: hidden;
+}
+.iconBox image{
+  width: 100%;
+  height: 100%;
+}
+checkbox .wx-checkbox-input{  
+   /* 自定义样式.... */
+  border-radius: 50%;
+}

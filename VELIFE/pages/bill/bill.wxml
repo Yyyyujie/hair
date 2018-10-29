@@ -1,0 +1,67 @@
+<view class="main">
+    <view class='timeBox'>根据日期查询结账情况
+      <view>
+        <view class="section">
+          <picker mode="date" value="{{date}}" start="{{start}}" end="{{end}}" bindchange="bindDateChange">
+            <view class="picker">
+              {{date}}
+            </view>
+          </picker>
+        </view>
+        <text>—</text>
+        <view class="section">
+          <picker mode="date" value="{{date1}}" start="{{start}}" end="{{end}}" bindchange="bindDateChange1">
+            <view class="picker">
+              {{date1}}
+            </view>
+          </picker>
+        </view>
+        <view class='timeBtn cancel' bindtap='cancel'>重置</view>
+        <view class='timeBtn ' bindtap='search'>查询</view>
+      </view>
+    </view>
+    <view class='table'>
+        <view class='nothing' wx:if="{{list.length==0}}">暂无数据</view>
+        <view class='tr' wx:for="{{list}}">
+            <view class='trTime'>
+              <view>时间</view>
+              <view>{{item.createDate}}</view>
+            </view>
+            <view class='allBox'>
+              <view class='all1'>
+                <view>
+                  <view class='smallTitle'>总订单</view>
+                  <view>{{item.orderCount?item.orderCount:0}}</view>
+                </view>
+                 <view>
+                  <view class='smallTitle'>微信支付</view>
+                  <view>{{item.wxPayCount?item.wxPayCount:0}}</view>
+                </view>
+                 <view>
+                  <view class='smallTitle'>支付宝支付</view>
+                  <view>{{item.aliPayCount?item.aliPayCount:0}}</view>
+                </view>
+                 <view>
+                  <view class='smallTitle'>现金支付</view>
+                  <view>{{item.cashPayCount?item.cashPayCount:0}}</view>
+                </view>
+              </view>
+              <view class='all1'>
+                 <view>
+                  <view class='smallTitle'>应结金额</view>
+                  <view>{{item.expectMoney?item.expectMoney:0}}</view>
+                </view>
+                 <view>
+                  <view class='smallTitle'>实结金额</view>
+                  <view>{{item.factMoney?item.factMoney:0}}</view>
+                </view>
+                 <view>
+                  <view class='smallTitle'>是否结清</view>
+                  <view>{{item.isClear==1?"是":"否"}}</view>
+                </view>
+              </view>
+            </view>
+        </view>
+    </view>
+
+  </view>

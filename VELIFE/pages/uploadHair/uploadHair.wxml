@@ -1,0 +1,21 @@
+<view class="main">
+ <view class='title'>
+  <view class='iconBox'>
+    <image src='../../images/logo.png'></image>
+  </view>
+  <text>HAIR</text>
+  <text>STYLIST</text>
+  <text>上传参考发型</text>
+</view>
+<view class='nikeNameView'>对顾客<view class='nikeName'>{{nikename}}</view>的推荐发型</view>
+  <view class='imgList'>
+    <view class='imgBox' wx:for="{{imgArr}}">
+      <image src="{{item}}" mode='aspectFill' bindtap='previewImage'></image>
+    </view>
+    
+  </view>
+  <view class='btnBox'>
+      <button class='chooseBtn' bindtap='chooseImg'>选择图片</button>
+      <button class='uploadBtn' bindtap="uploadImg">上传图片</button>
+    </view>
+</view>

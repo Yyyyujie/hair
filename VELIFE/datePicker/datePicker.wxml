@@ -1,0 +1,26 @@
+<view class="date-box">
+    <view class="date-title">{{title}}</view>
+    <picker-view class="picker" indicator-style="height: 40px;" value="{{value}}" bindchange="handleChange">
+        <picker-view-column>
+            <view class="item" wx:for="{{yearArr}}" wx:key="{{item}}">{{item}}年</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view class="item" data-id="month" wx:for="{{monthArr}}" wx:key="{{item}}">{{item}}月</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view class="item" wx:for="{{dayArr}}" wx:key="{{item}}">{{item}}日</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view class="item" wx:for="{{hoursArr}}" wx:key="{{item}}">{{item}}时</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view class="item" wx:for="{{minutesArr}}" wx:key="{{item}}">{{item}}分</view>
+        </picker-view-column>
+    </picker-view>
+
+    <view class="ft">
+        <view class="cancel btn" bindtap='cancel'>取消</view>
+        <view class="confirm btn" bindtap='confirm'>确认</view>
+    </view>
+</view>
+<!-- <view class="mask"></view> -->

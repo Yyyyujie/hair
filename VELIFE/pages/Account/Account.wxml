@@ -1,0 +1,69 @@
+<!--pages/Account/Account.wxml-->
+<view class='main'>
+
+  <view class='banner'>
+    <image src='../../images/banner.jpg'></image>
+    <view class='bannerZi'>
+      <image src='../../images/bannerZi.png' mode='widthFix'></image>
+    </view>
+    <view class='bot'>
+      <image src='../../images/bot.png'></image>
+    </view>
+  </view>
+  <view class='title'>
+    <view class='iconBox'>
+      <image src='../../images/logo.png'></image>
+    </view>
+    <text>HAIR</text>
+    <text>STYLIST</text>
+    <text>今日账单</text>
+  </view>
+  <view class='table'>
+    <view>总订单：
+      <text>{{list.orderCount?list.orderCount:0}}</text>
+    </view>
+    <view>微信结款数：
+      <text>{{list.wxPayCount?list.wxPayCount:0}}</text>
+    </view>
+    <view>支付宝结款数:
+      <text>{{list.aliPayCount?list.aliPayCount:0}}</text>
+    </view>
+    <view>现金结款数:
+      <text>{{list.cashPayCount?list.cashPayCount:0}}</text>
+    </view>
+
+    <view>应结金额：
+      <text>¥{{list.expectMoney?list.expectMoney:0}}</text>
+    </view>
+    <view>实结金额：
+      <text>¥{{list.factMoney?list.factMoney:0}}</text>
+    </view>
+  </view>
+
+
+
+
+  <!-- <view class='table'>
+        <view class='all'>总订单：{{list.orderCount?list.orderCount:0}}</view>
+        <view class='three'>
+          <view class='threeTitle'>
+            <view>微信结款数</view>
+             <view>支付宝结款数</view>
+              <view>现金结款数</view>
+          </view>
+          <view class='threeCount'>
+            <view>{{list.wxPayCount?list.wxPayCount:0}}</view>
+             <view>{{list.aliPayCount?list.aliPayCount:0}}</view>
+              <view>{{list.cashPayCount?list.cashPayCount:0}}</view>
+          </view>
+
+
+         
+        </view>
+         <view class='countBox'>
+              <view class='count1'>应结金额：{{list.expectMoney?list.expectMoney:0}}</view>
+              <view class='count1'>实结金额：{{list.factMoney?list.factMoney:0}}</view>
+          </view>
+    </view> -->
+  <button bindtap='bill'>结账</button>
+</view>

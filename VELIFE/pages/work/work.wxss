@@ -1,0 +1,78 @@
+page{
+  width: 100%;
+}
+.main{
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.year{
+  width: 50%;
+  height: 80rpx;
+  background: #19181E;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  letter-spacing: 6rpx;
+  border-radius: 10rpx;
+}
+.work{
+  padding-left: 60rpx;
+  font-size: 30rpx;
+  position: relative;
+  height: 104rpx;
+  padding-top: 100rpx;
+  color: #9C9BA5;
+}
+.title{
+  letter-spacing: 4rpx;
+  margin-bottom: 20rpx;
+}
+.progress .work:nth-child(1) .card::before{
+  height: 95rpx;
+  top: -102rpx;
+}
+.card{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  left: 0;
+  top: 104rpx;
+}
+.card::before{
+  content:"";
+  display: block;
+  width: 2rpx;
+  height: 140rpx;
+  position: absolute;
+  top: -150rpx;
+  background: #F4F4F4;
+  margin-left: 19rpx;
+  margin-bottom: 8rpx;
+}
+.card image{
+  width: 100%;
+  height: 100%;
+}
+.zw{
+  color: #000;
+}
+.zw::after{
+  content: "";
+  display: inline-block;
+  width: 8rpx;
+  height: 8rpx;
+  background: #000;
+  border-radius: 50%;
+  margin: 0 20rpx 4rpx;
+}
+.pullRight{
+  float: right;
+  font-size: 26rpx;
+}
+.nothing{
+  text-align: center;
+  font-size:0.8rem;
+  color:#9C9BA5;
+  line-height: 3rem;
+}

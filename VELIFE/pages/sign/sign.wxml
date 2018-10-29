@@ -1,0 +1,51 @@
+<view class='banner'>
+  <image src='../../images/banner.jpg'></image>
+  <view class='bannerZi'>
+    <image src='../../images/bannerZi.png'></image>
+  </view>
+  <view class='bot'>
+    <image src='../../images/bot.png'></image>
+  </view>
+</view>
+<view class='main'>
+  <view class='timeBox'>
+    <view class='calendar'>
+      <image src='../../images/calendar.png'></image>
+    </view>
+    <text>{{week}}</text>
+    <text>{{time}}</text>
+  </view>
+  <view class='who'>剪发师：{{name}}</view>
+  <view class='{{status==1||status==2?"start active":"start"}}'>
+    <view>上班时间：09:00</view>
+    <view class='signTime' wx:if="{{status==1||status==2}}">打卡时间：{{info.upWorkTime}}</view>
+    <view wx:if="{{status==1||status==2}}">
+      <view class="address">
+        <image src='../../images/address.png'></image>
+      </view>
+      {{info.address}}</view>
+  </view>
+  <view class='{{status==2?"end active":"end"}}' wx:if="{{status==1||status==2}}">
+    <view>下班时间：18:00</view>
+    <view class='signTime' wx:if="{{status==2}}">打卡时间：{{info.downWorkTime}}</view>
+    <view wx:if="{{status==2}}">
+      <view class="address">
+        <image src='../../images/address.png'></image>
+      </view> {{info.address}}</view>
+  </view>
+  <!-- <view class='signBtn' bindtap='sign'   wx:if="{{status==1}}">
+    <picker mode="multiSelector" value="{{date}}" start="{{start}}" end="{{end}}" bindchange="bindDateChange">
+      <image src='../../images/signBtn.png'></image>
+      <view class='ka'>下班打卡</view>
+    </picker>
+  </view> -->
+  <view class='signBtn' bindtap='sign' wx:if="{{status==0}}">
+    <image src='../../images/signBtn.png'></image>
+    <view class='ka'>上班打卡</view>
+  </view>
+  <view class='signBtn' bindtap='sign' wx:if="{{status==1}}">
+    <image src='../../images/signBtn.png'></image>
+    <view class='ka'>下班打卡</view>
+  </view>
+</view>
+<datePicker wx:if="{{datepicker}}" title="{{title}}" beginDate='{{time}}' bindcancel="cancel" bindconfirm="confirm"></datePicker>

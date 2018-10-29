@@ -1,0 +1,61 @@
+<view class='topBox'></view>
+<view class="tabBox">
+  <view class="tabLeft {{num==1?'active':''}}" data-num="1" bindtap='change'>
+    <text>待服务</text>
+  </view>
+  <view class="tabRight {{num==2?'active':''}}" data-num="2" bindtap='change'>
+    <text>待付款</text>
+  </view>  
+  <view class="tabRight {{num==0?'active':''}}" data-num="0" bindtap='change'>
+    <text>已完成</text>
+  </view>
+    
+</view>
+<scroll-view scroll-y style="height: {{scrollHeight}}px;" bindscrolltoupper="upper" bindscrolltolower="lower"  scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+
+  <view class='main'>
+    <view class='doneBox'>
+      <view class='liBox' wx:for="{{list}}">
+        <view class='liLeft'>
+          <image class='tx' src='{{item.member.headImage?item.member.headImage:"../../images/logo.png"}}'></image>
+          <text class='name'>{{item.member.nickName?item.member.nickName:"未知"}}</text>
+          <!-- <text class='engName'>{{item.engName}}</text> -->
+        </view>
+        <view class='liRight'>
+          <view>预约号码:
+            <text>{{item.orderNo}}</text>
+          </view>
+          <view>联系方式:
+            <text>{{item.member.mobile?item.member.mobile:'未知'}}</text>
+          </view>
+          <view style='display:flex'>
+            <text class='address'>{{item.itemName}}</text>
+            <!-- <text class='address' style="flex:1">{{item.shopVelife.address}}</text> -->
+          </view>
+          <view>订单时间:
+            <text>{{item.createDate?item.createDate:"未知"}}</text>
+          </view>
+          <view>订单金额:
+            <text>¥{{item.orderPrice?item.orderPrice:0}}</text>
+          </view>
+          <view wx:if="{{num==0&&item.payStatus==1}}">实结金额:
+            <text>¥{{item.discountPrice?item.discountPrice:0}}</text>
+          </view>
+        </view>
+        <!-- <view class='status'>{{num==0?"已完成":"待服务"}}</view> -->
+        <view class='underline underlinePay' data-id="{{item.id}}" wx:if="{{num==0&&item.payStatus==0}}" bindtap='underline'>线下支付</view>
+        <view class='underline underlinePay' data-id="{{item.id}}" data-name="{{item.member.nickName}}" wx:if="{{num==0&&item.payStatus==1}}" bindtap='uploadHair'>上传发型</view>
+        <view class='underline underlinePay' data-id="{{item.id}}" wx:if="{{num==2}}" bindtap='underline'>线下支付</view>
+      </view>
+
+
+    </view>
+    <view class='loading' wx:if="{{loading}}">
+        <view class='load'>
+          <image src='../../images/loading.gif'></image>
+        </view>
+        <view>正在加载...</view>
+      </view>
+    <view wx:if="{{list.length==0}}" class='nothing'>暂无数据</view>
+  </view>
+</scroll-view>

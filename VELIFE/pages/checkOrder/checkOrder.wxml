@@ -1,0 +1,68 @@
+<view class='doneBox'>
+  <!-- <scroll-view scroll-y style="height: 100vh;"bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="{{scrollTop}}"> -->
+  <view class="main">
+    <view class='timeBox'>根据日期查询订单
+      <view>
+        <view class="section">
+          <picker mode="date" value="{{date}}" start="{{start}}" end="{{end}}" bindchange="bindDateChange">
+            <view class="picker">
+              {{date}}
+            </view>
+          </picker>
+        </view>
+        <text>—</text>
+        <view class="section">
+          <picker mode="date" value="{{date1}}" start="{{start}}" end="{{end}}" bindchange="bindDateChange1">
+            <view class="picker">
+              {{date1}}
+            </view>
+          </picker>
+        </view>
+        <view class='timeBtn cancel' bindtap='cancel'>重置</view>
+        <view class='timeBtn ' bindtap='search'>查询</view>
+      </view>
+    </view>
+  </view>
+
+
+
+
+  <view class='liBox' wx:for="{{list}}">
+    <view class='liLeft'>
+      <image class='tx' src='{{item.member.headImage?item.member.headImage:"../../images/logo.png"}}'></image>
+      <text class='name'>{{item.member.nickName?item.member.nickName:"未知"}}</text>
+      <!-- <text class='engName'>{{item.engName}}</text> -->
+    </view>
+    <view class='liRight'>
+      <view>预约号码:
+        <text>{{item.orderNo}}</text>
+      </view>
+      <view>联系方式:
+        <text>{{item.member.mobile?item.member.mobile:'未知'}}</text>
+      </view>
+      <view>
+        <text class='address'>{{item.itemName}}</text>
+        <text class='address'>{{item.shopVelife.address}}</text>
+      </view>
+      <view>订单时间:
+        <text>{{item.createDate?item.createDate:"未知"}}</text>
+      </view>
+      <view>订单金额:
+        <text>¥{{item.orderPrice?item.orderPrice:"未知"}}</text>
+      </view>
+    </view>
+    <view class='status' wx:if="{{item.orderStatus=='0000'}}">待服务</view>
+    <view class='status' wx:if="{{item.orderStatus=='0010'}}">已完成</view>
+    <view class='status' wx:if="{{item.orderStatus=='0001'}}">服务中</view>
+    <view class='status' wx:if="{{item.orderStatus=='1111'}}">已取消</view>
+  </view>
+  <!-- </scroll-view> -->
+
+  <view wx:if="{{list.length==0}}" class='nothing'>暂无数据</view>
+  <view class='loading' wx:if="{{loading}}">
+    <view class='load'>
+      <image src='../../images/loading.gif'></image>
+    </view>
+    <view>正在加载...</view>
+  </view>
+</view>

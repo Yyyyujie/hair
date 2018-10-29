@@ -1,0 +1,67 @@
+.main{
+  width: 100%;
+  padding: 0 20rpx;
+  margin: 0 auto;
+}
+.title{
+  display: flex;
+  align-items: center;
+   margin-top: 20rpx;
+}
+.iconBox{
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+  margin-right: 10rpx;
+}
+.iconBox image{
+  width: 100%;
+  height: 100%;
+  display:inherit;
+}
+.title>text:nth-child(2){
+  font-weight: bold;
+  font-size: 22rpx;
+  margin-right: 10rpx;
+}
+.title>text:nth-child(3){
+  font-size: 22rpx;
+  margin-right: 10rpx;
+  color: #6D6F73;
+}
+.title>text:nth-child(4){
+  font-size: 28rpx;
+}
+.nikeNameView{
+  display: flex;
+  font-size:25rpx;
+  line-height:80rpx;
+}
+.nikeName{
+  color: #F8265D
+}
+.imgList{
+  overflow: hidden;
+}
+.imgBox{
+  width: 200rpx;
+  height: 200rpx;
+  border: 1rpx solid #ccc;
+  float: left;
+  margin: 20rpx;
+}
+.imgBox image{
+  width: 100%;
+  height: 100%;
+}
+.btnBox{
+  display: flex;
+  justify-content: space-around;
+  margin-top:48rpx;
+}
+.btnBox button{
+ width:30%;
+  height:68rpx;
+  line-height:68rpx;
+  font-size:30rpx;
+}

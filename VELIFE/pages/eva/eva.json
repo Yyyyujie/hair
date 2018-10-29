@@ -1,0 +1,8 @@
+{
+  "backgroundTextStyle": "#19181E",
+  "navigationBarBackgroundColor": "#19181E",
+  "navigationBarTextStyle": "#fff",
+  "navigationBarTitleText": "对我的评价",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 0
+}
