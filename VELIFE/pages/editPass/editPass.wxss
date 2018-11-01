@@ -47,6 +47,7 @@ page{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1rpx solid #ccc;
 }
 .nameBox .inpBox,.passBox .inpBox{
   width: 80%;
@@ -78,7 +79,7 @@ page{
   width: 64%;
   height: 80rpx;
   border-radius: 40rpx;
-  background: linear-gradient(to right,#F42158,#6A1EB6);
+  background: #000315;
   color: #fff;
   line-height: 80rpx;
   font-size: 28rpx;

@@ -8,30 +8,18 @@
   <view class='formBox'>
 
     <view class='nameBox'>
-      <view class='iconBox'>
-        <image src='../../images/username.png'></image>
-      </view>
-      <view class='inpBox'>
-        <input placeholder='请输入旧密码' placeholder-class="plac" type='text' password="true" bindinput='oldPass' name="password"></input>
-      </view>
+      <view class='iconfont icon-yonghuming'></view>
+      <input placeholder='请输入旧密码' placeholder-class="plac" type='text' password="true" bindinput='oldPass' name="password"></input>
       <view class='iconBox hide'></view>
     </view>
     <view class='passBox'>
-      <view class='iconBox'>
-        <image src='../../images/password.png'></image>
-      </view>
-      <view class='inpBox'>
-        <input placeholder='请输入新密码' placeholder-class="plac" type='text' password="true" bindinput='newPass' name="password1"></input>
-      </view>
+      <view class='iconfont icon-mima'></view>
+      <input placeholder='请输入新密码' placeholder-class="plac" type='text' password="true" bindinput='newPass' name="password1"></input>
       <view class='iconBox'></view>
     </view>
     <view class='passBox'>
-      <view class='iconBox'>
-        <image src='../../images/password.png'></image>
-      </view>
-      <view class='inpBox'>
-        <input placeholder='请再次输入新密码' placeholder-class="plac" type='text' password="true" bindinput='againPass' name="password2"></input>
-      </view>
+      <view class='iconfont icon-mima'></view>
+      <input placeholder='请再次输入新密码' placeholder-class="plac" type='text' password="true" bindinput='againPass' name="password2"></input>
       <view class='iconBox'></view>
     </view>
 

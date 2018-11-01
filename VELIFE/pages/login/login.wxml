@@ -8,22 +8,15 @@
 <form bindsubmit='login'>
   <view class='formBox'>
     <view class='nameBox'>
-      <view class='iconBox'>
-        <image src='../../images/username.png'></image>
-      </view>
+       <view class='iconfont icon-yonghuming'></view>
      
         <input placeholder='手机号/邮箱号/用户名' placeholder-class="plac" type='number' value='{{phone}}' maxlength="11" name="phone"></input>
 
      
     </view>
     <view class='passBox'>
-      <view class='iconBox'>
-        <image src='../../images/password.png'></image>
-      </view>
-      <view class='inpBox'>
-        <input placeholder='请输入登录密码' placeholder-class="plac" type='text' password="true" value='{{pass}}' name="password"></input>
-      </view>
-      <view class='iconBox'></view>
+       <view class='iconfont icon-mima'></view>
+      <input placeholder='请输入登录密码' placeholder-class="plac" type='text' password="true" value='{{pass}}' name="password"></input>
     </view>
     <!-- <view class='radioBox'>
       <view>

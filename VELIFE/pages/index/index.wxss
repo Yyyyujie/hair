@@ -5,13 +5,45 @@ page{
 }
 .banner{
   width: 100%;
-  height: 32%;
+  /* height: 40%; */
+  margin: auto;
   position: relative;
+  padding: 20rpx;
+  box-sizing: border-box;
 }
-.banner image{
+.bannerMain{
   width: 100%;
   height: 100%;
+  box-shadow: 0 0 10px #ccc;
+  font-size: 30rpx;
+  overflow:hidden;
+  border-radius: 10rpx;
+  padding: 20rpx 0;
 }
+.bannerSecondTitle{
+  text-align: center;
+}
+.bannerTitle{
+  text-align: center;
+  line-height: 80rpx;
+}
+.bannerBox{
+  width: 100%;
+}
+.bannerSecondTitleNumber{
+  font-size: 40rpx;
+}
+.bannerLi{
+  width: 33.33%;
+  float: left;
+  text-align: center;
+  font-size:24rpx;
+  padding:20rpx 0;
+}
+.bannerNumber{
+  font-size: 28rpx;
+}
+
 .main{
   width: 90%;
   margin: 0 auto;

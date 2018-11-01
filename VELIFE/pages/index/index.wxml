@@ -1,10 +1,16 @@
 <view class='banner'>
-    <image src='../../images/banner.jpg'></image>
-    <view class='bannerZi'>
-      <image src='../../images/bannerZi.png' ></image>
-    </view>
-    <view class='bot'>
-      <image src='../../images/bot.png'></image>
+    <view class='bannerMain'>
+      <view class="bannerTitle">个人业绩</view>
+      <view class='bannerSecondTitle'>
+          <view>今日主营收入</view>
+          <view class='bannerSecondTitleNumber'>0</view>
+      </view>
+      <view class='bannerBox'>
+        <view class='bannerLi' wx:for="{{6}}">
+            <view class='bannerNumber'>10.00</view>
+            <view>今日剪发</view>
+        </view>
+      </view>
     </view>
 </view>
 <view class='main'>

@@ -41,18 +41,20 @@ page{
   justify-content: space-around
 }
 .nameBox,.passBox{
-  width: 80%;
+  /* width: 80%; */
   height: 80rpx;
   margin-bottom: 10rpx;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1rpx solid #ccc;
+  font-size: 30rpx;
 }
 .nameBox .inpBox,.passBox .inpBox{
-  width: 80%;
+  /* width: 80%; */
   height: 100%;
   border-radius: 45rpx;
-  background: linear-gradient(to right,#FC739A,#B164FF);
+  /* background: linear-gradient(to right,#FC739A,#B164FF); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,11 +80,12 @@ page{
   width: 64%;
   height: 80rpx;
   border-radius: 40rpx;
-  background: linear-gradient(to right,#F42158,#6A1EB6);
+  /* background: linear-gradient(to right,#F42158,#6A1EB6); */
   color: #fff;
   line-height: 80rpx;
   font-size: 28rpx;
   letter-spacing: 4rpx;
+  background: #000315;
 }
 .iconBox{
   width: 80rpx;
@@ -90,7 +93,7 @@ page{
 }
 .plac{
   font-size: 26rpx;
-  color: #E9E9E9;
+  color: #ccc;
 }
 .hide{
   visibility: hidden;
@@ -102,4 +105,7 @@ page{
 checkbox .wx-checkbox-input{  
    /* 自定义样式.... */
   border-radius: 50%;
+}
+.formBox .iconfont{
+  margin: 0 10rpx;
 }
