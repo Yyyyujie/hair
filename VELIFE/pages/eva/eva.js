@@ -52,10 +52,10 @@ Page({
     })
     app.wxItools.wxItools.request(app.__config.InterfaceUrl.evaList, 'GET', {
       token: wx.getStorageSync('userInfo').token,
-      [barber]: wx.getStorageSync('userInfo').userInfo.id,
       pageNo: that.data.pageNo,
       pageSize: that.data.pageSize
     }, (ret) => {
+      console.log(ret)
       wx.hideLoading();
       wx.stopPullDownRefresh();
       ret.data.list.forEach(function(item,index){

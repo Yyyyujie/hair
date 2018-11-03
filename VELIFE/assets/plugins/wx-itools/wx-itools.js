@@ -22,6 +22,7 @@ let wxItools = {
         'content-type': methods == 'GET || get' ? 'application/json' : 'application/x-www-form-urlencoded'
       },
       success: function (res) {
+        console.log(res)
         if (res.statusCode == 200) {
           let data = res.data;
           if (data.code == 201) {

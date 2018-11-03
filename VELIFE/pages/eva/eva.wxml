@@ -15,13 +15,13 @@
       </view>
       <view class='evaRight'>
         <view class='first'>
-          <text class='name'>{{item.shortName?item.shortName:'未知'}}</text>(
+          <text class='name'>{{item.shop.name?item.shop.name:'未知'}}</text>(
           <text>{{item.shortPhone?item.shortPhone:'未知'}}</text>)</view>
         <view class='con'>
           {{item.conten}}
         </view>
         <view class='imgBox'>
-          <image class='conImg'  wx:for="{{item.pics}}" wx:for-item="imgItem" wx:for-index="imgIndex" src='{{imgItem}}' data-src="{{imgItem}}" data-index="{{index}}" bindtap="previewImage"></image>
+          <image class='conImg'  wx:for="{{item.pics}}" wx:key="" wx:for-item="imgItem" wx:for-index="imgIndex" src='{{imgItem}}' data-src="{{imgItem}}" data-index="{{index}}" bindtap="previewImage"></image>
         </view>
 
         <view class='bottom'>

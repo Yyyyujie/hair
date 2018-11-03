@@ -9,14 +9,11 @@
   <view class='formBox'>
     <view class='nameBox'>
        <view class='iconfont icon-yonghuming'></view>
-     
-        <input placeholder='手机号/邮箱号/用户名' placeholder-class="plac" type='number' value='{{phone}}' maxlength="11" name="phone"></input>
-
-     
+        <input placeholder='手机号/邮箱号/用户名' placeholder-class="plac" type='number' value='{{phone}}' maxlength="11" name="phone" data-type="phone" bindinput='msg'></input>
     </view>
     <view class='passBox'>
        <view class='iconfont icon-mima'></view>
-      <input placeholder='请输入登录密码' placeholder-class="plac" type='text' password="true" value='{{pass}}' name="password"></input>
+      <input placeholder='请输入登录密码' placeholder-class="plac" type='text' password="true" value='{{pass}}' name="password" data-type="password" bindinput='msg'></input>
     </view>
     <!-- <view class='radioBox'>
       <view>

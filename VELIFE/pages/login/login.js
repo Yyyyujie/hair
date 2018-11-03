@@ -55,8 +55,16 @@ Page({
         checked:!this.data.checked
       })
   },
+  //获取输入的信息
+  msg:function(e){
+    let str = e.currentTarget.dataset.type;
+    this.setData({
+      [str]:e.detail.value
+    });
+  },
   // 用户点击登录
   login:function(e){
+    console.log(e)
     let checkedStatus = this.data.checked;
     var rxPhone = /^1[3|5|8|7]\d{9}$/; 
     let phone = e.detail.value.phone;

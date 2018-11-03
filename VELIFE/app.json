@@ -22,14 +22,14 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "WeChat"
   },
   "tabBar": {
     "color": "#ccc",
     "selectedColor": "#000",
     "backgroundColor": "#fff",
-    "borderStyle": "#f6f6f6",
+    "borderStyle": "#fff",
     "list": [
       {
         "pagePath": "pages/index/index",

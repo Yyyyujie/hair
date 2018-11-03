@@ -42,6 +42,8 @@ Page({
 
     if (app.globalData.orderActive==1){
       status = app.__config.OrderStatus.UNDOSTATUS
+    } else if (app.globalData.orderActive == 2){
+      status = app.__config.OrderStatus.UNPAY
     }else{
       status = app.__config.OrderStatus.DONESTATUS
     }
@@ -53,6 +55,7 @@ Page({
       pageNo:1,
       ajax:true
     });
+    console.log(this.data.status)
     wx.showLoading({
       title: '加载中...',
     })
@@ -63,24 +66,31 @@ Page({
     let that = this;
     app.wxItools.wxItools.request(app.__config.InterfaceUrl.orderList, 'GET', {
       token: wx.getStorageSync('userInfo').token,
-      type: 'barber',
-      id: wx.getStorageSync('userInfo').userInfo.id,
       pageNo: that.data.pageNo,
       pageSize: that.data.pageSize,
-      status: that.data.status,
-      payStatus:that.data.payStatus
+      orderStatus:that.data.status
     }, (ret) => {
+      console.log(ret)
       wx.hideLoading();
       wx.stopPullDownRefresh();
       if (ret.code == 200) {
-        ret.data.list.forEach(function(item,index){
-          item.member.headImage = app.renderImage(item.member.headImage);
-        })
-        that.setData({
-          list: [...that.data.list, ...ret.data.list],
-          loading: false,
-          ajax: ret.data.list.length < that.data.pageSize ? false : true
-        })
+        if (ret.data.list){
+          ret.data.list.forEach(function (item, index) {
+            item.member.headImage = app.renderImage(item.member.headImage);
+          })
+          that.setData({
+            list: [...that.data.list, ...ret.data.list],
+            loading: false,
+            ajax: ret.data.list.length < that.data.pageSize ? false : true
+          })
+        }else{
+          that.setData({
+            list: [],
+            loading: false,
+            ajax: false
+          })
+        }
+        
         app.globalData.orderActive=1;
       } else {
         wx.showToast({
@@ -135,6 +145,7 @@ Page({
     this.toggle(e.currentTarget.dataset.num)
   },
   toggle:function(num){
+    console.log(num)
     wx.showLoading({
       title: '加载中...',
       mask:true
@@ -158,7 +169,7 @@ Page({
     }
     else{
       this.setData({
-        status: app.__config.OrderStatus.DONESTATUS,
+        status: app.__config.OrderStatus.UNPAY,
         num: num,
         list: [],
         pageNo: 1,
